@@ -87,9 +87,26 @@ jupyter notebook HotelBookingDemand_Capstone_Yonkie.ipynb
 
 Notebook menyimpan pipeline lengkap sebagai `model_hotel_cancellation.pkl` setelah seluruh sel dijalankan.
 
+## Menjalankan dashboard Streamlit
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Dashboard membaca `data_hotel_booking_demand.csv`, menerapkan proses cleaning dan feature engineering yang sama dengan notebook, lalu melatih Logistic Regression sekali dan menyimpannya di cache Streamlit. Fitur dashboard:
+
+- filter market segment, deposit type, customer type, dan negara;
+- KPI serta visualisasi cancellation rate;
+- evaluasi model dan simulasi probability threshold;
+- form prediksi risiko satu booking;
+- tabel serta download data yang sudah difilter.
+
 ## Isi repository
 
 - `HotelBookingDemand_Capstone_Yonkie.ipynb`: analisis, preprocessing, benchmarking, evaluasi, dan rekomendasi.
+- `app.py`: dashboard Streamlit untuk EDA, evaluasi, dan prediksi booking.
+- `.streamlit/config.toml`: tema dan konfigurasi dashboard.
 - `data_hotel_booking_demand.csv`: dataset sumber.
 - `Prediksi_Pembatalan_Hotel_Capstone3_Yonkie.pptx`: presentasi sumber.
 - `Prediksi_Pembatalan_Hotel_Capstone3_FINAL_ipynb_aligned.pptx`: presentasi yang diselaraskan dengan output notebook.
@@ -102,4 +119,3 @@ Notebook menyimpan pipeline lengkap sebagai `model_hotel_cancellation.pkl` setel
 - Dataset tidak memuat `lead_time`, tanggal menginap, ADR, atau identitas tamu.
 - Precision 0,459 berarti model cocok sebagai alat penyaring dan prioritisasi, bukan pengambil keputusan otomatis.
 - Performa perlu dipantau pada data baru untuk mendeteksi perubahan pola pelanggan.
-

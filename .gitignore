@@ -26,6 +26,9 @@ secrets.json
 .codex/
 codex/
 .codex-build/
+.streamlit/secrets.toml
+.pytest_cache/
+hotel_booking_filtered.csv
 *.swp
 *.swo
 *~

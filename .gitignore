@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+profile_default/
+.jupyter/
+
+# Environments and secrets
+.env
+.env.local
+.venv/
+env/
+venv/
+secrets.json
+.python-version
+
+# Editors, Codex, OS, and temporary files
+.vscode/
+.idea/
+.codex/
+codex/
+.codex-build/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Generated outputs
+outputs/logs/
+outputs/temp/
